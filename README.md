@@ -3,10 +3,10 @@
 An implementation of 1-dimensional cellular automata _https://en.wikipedia.org/wiki/Elementary_cellular_automaton_ with some variations
 
 ## Quick Start
-
-### These are written in Python and it is helpful to use 'uv'
+(_These are written in Python and it is helpful to use 'uv'_)
 uv run src/bw2.py
 
+## Naming Conventions
 The scripts are named as follows:
 
 The first letter:
