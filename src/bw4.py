@@ -4,7 +4,8 @@
 #
 
 import sys
-from lib.automata import BWAutomata, Row
+import argparse
+from lib.automata import BWAutomata, Row, Distribution
 from bitarray import bitarray
 from bitarray.util import ba2int
 
@@ -83,11 +84,17 @@ def verify_pattern():
         print(f"{i}: {next(row_gen)}")
 
 def main():
-    algo = int(sys.argv[1]) if len(sys.argv) > 1 else 52
-    automata = FourBitAutomata(1600, 1000, algo, 'random')
+    parser = argparse.ArgumentParser(description='One dimensional cellular automata that uses two previous cells of colors Red, Green or Blue to determine color')
+    parser.add_argument('-w', '--width', type=int, default=1600, help='The width of the window to create')
+    parser.add_argument('-i', '--height', type=int, default=1000, help='The height of the window to create')
+    parser.add_argument('-a', '--algo', type=int, help="The algorithm number of automata to use (can change with arrow keys while running)", default=52)
+    parser.add_argument('-d', '--distribution', type=Distribution, choices=list(Distribution), default=Distribution.single,
+                        help="Initial distribution: single point in middle, random, alternating points, clumpy")
+    parser.add_argument('-n', '--narrow', type=int, help="Will narrow starting distribution to fraction of width, 10 will be 1/10th of width", default=0)
+    args = parser.parse_args()
+    automata = FourBitAutomata(args.width, args.height, args.algo, args.distribution, args.narrow)
     automata.run()
 
 
 if __name__=='__main__':
-    #main()
-    verify_pattern()
+    main()
