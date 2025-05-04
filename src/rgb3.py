@@ -65,7 +65,7 @@ def verify_pattern():
 
 
 def main():
-    parser = argparse.ArgumentParser(description='One dimensional cellular automata that uses three previous cells of colors Red, Green or Blue to determine color')
+    parser = argparse.ArgumentParser(description='One dimensional cellular automata that uses three previous cells of colors red, green and blue to determine color')
     parser.add_argument('-w', '--width', type=int, default=1600, help='The width of the window to create')
     parser.add_argument('-i', '--height', type=int, default=1000, help='The height of the window to create')
     parser.add_argument('-a', '--algo', type=int, help="The algorithm number of automata to use (can change with arrow keys while running)", default=197252530603)

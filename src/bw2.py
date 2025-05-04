@@ -3,7 +3,6 @@
 ## Black and white automata that uses two cells above, left and right but not center
 ##
 
-import sys
 import argparse
 from lib.automata import BWAutomata, Row, Distribution
 from bitarray import bitarray
@@ -73,7 +72,7 @@ def verify_pattern():
 
 
 def main():
-    parser = argparse.ArgumentParser(description='One dimensional cellular automata that uses two previous cells of colors Red, Green or Blue to determine color')
+    parser = argparse.ArgumentParser(description='One dimensional cellular automata that uses two previous cells of colors black and white to determine color')
     parser.add_argument('-w', '--width', type=int, default=1600, help='The width of the window to create')
     parser.add_argument('-i', '--height', type=int, default=1000, help='The height of the window to create')
     parser.add_argument('-a', '--algo', type=int, help="The algorithm number of automata to use (can change with arrow keys while running)", default=6)
