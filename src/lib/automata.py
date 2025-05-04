@@ -4,10 +4,10 @@ os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 import pygame
 import sys
 from random import randint, seed
-from enum import Enum
+from enum import StrEnum
 
 
-class Distribution(Enum):
+class Distribution(StrEnum):
     single = 'single'
     random = 'random'
     alternating = 'alternating'

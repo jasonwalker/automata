@@ -69,8 +69,8 @@ def main():
     parser.add_argument('-w', '--width', type=int, default=1600, help='The width of the window to create')
     parser.add_argument('-i', '--height', type=int, default=1000, help='The height of the window to create')
     parser.add_argument('-a', '--algo', type=int, help="The algorithm number of automata to use (can change with arrow keys while running)", default=6042)
-    parser.add_argument('-d', '--distribution', type=Distribution, choices=list(Distribution), default=Distribution.single,
-                        help="Initial distribution: single point in middle, random, alternating points, clumpy")
+    parser.add_argument('-d', '--distribution', choices=Distribution, default=Distribution.single,
+                        help="Initial distribution of starting row")
     parser.add_argument('-n', '--narrow', type=int, help="Will narrow starting distribution to fraction of width, 10 will be 1/10th of width", default=0)
     args = parser.parse_args()
 
