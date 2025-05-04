@@ -1,0 +1,11 @@
+[project]
+name = "automata"
+version = "0.1.0"
+description = "Playing with 1d cellular automata"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "bitarray>=3.3.2",
+    "numpy>=2.2.5",
+    "pygame>=2.6.1",
+]
