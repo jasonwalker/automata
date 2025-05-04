@@ -9,11 +9,20 @@ uv run src/bw2.py
 
 uv run src/rgb3.py
 
-uv run src/bw2.py -a 6 -d random -n 10
+uv run src/bw2.py -r 6 -d random -n 10
 
-uv run src/bw3.py -a 30 -d single 
+uv run src/bw3.py -r 30 -d single 
 
 uv run src/rgb3.py -d clumpy -n 10
+
+## Controls
+While the automata is scrolling, you can:
+
+**left arrow** go to previous rule
+
+**right arrow** go to next rule
+
+**space bar** pause the scrolling
 
 
 ## Options
@@ -22,7 +31,7 @@ uv run src/rgb3.py -d clumpy -n 10
 
 **-h**: Height of window
 
-**-a**: algorithm number that follows the standard naming convention (Wolfram code)
+**-r**: rule number that follows the standard naming convention (Wolfram code)
 
 **-d**: initial distribution of cell colors
 
