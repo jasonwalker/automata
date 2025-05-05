@@ -36,12 +36,12 @@ class TwoCellRGBAutomata(RGBAutomata):
         return Base3Row2Cells(self.width)
 
     def get_pattern(self):
-        return np.base_repr(self.algo, 3).zfill(27)
+        return np.base_repr(self.algo, 3).zfill(9)
 
     def calculate_it(self, algo_pattern, data):
         as_string = ''.join(map(str, data))
         loc = int(as_string, 3)
-        return int(algo_pattern[26-loc])
+        return int(algo_pattern[8-loc])
 
 
 def verify_pattern():
